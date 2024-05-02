@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Recruitment System</title>
+<style>
+    body {
+        background-color: #1f1f1f;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    textarea, input[type="text"], input[type="submit"] {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #555;
+        color: #fff;
+    }
+    #inputText {
+        height: 200px; 
+    }
+    .output {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #444;
+        color: #fff;
+        font-size: 16px;
+    }
+    .submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit:hover,.reset:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>AI Recruiter</h2>
+    <form method="post" action="/" >
+        <input type="text" name="candidateName"  id="candidateName" value="{{candidate_name}}"  placeholder="Enter candidate name..." required>
+        <textarea name="jobDescription" id="inputText"  placeholder="Enter job description or requirements..." required >{{ job_description }}</textarea>
+        <input type="submit" class="submit" value="Submit">
+    </form>
+    <textarea id="outputText" class="output"   placeholder="Candidate feedback will appear here..." readonly>{{ processed_data }}</textarea>
+    <button class="reset" onclick="resetForm()">Reset</button>
+</div>
+
+<script>
+    function resetForm() {
+        document.getElementById("candidateName").value = "";
+        document.getElementById("inputText").value = "";
+        document.getElementById("outputText").value = "";
+    }
+</script>
+
+
+</body>
+</html>
