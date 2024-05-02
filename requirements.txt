@@ -1,0 +1,9 @@
+google-generativeai
+python-dotenv
+pyttsx3
+SpeechRecognition 
+pydub
+pipwin
+pyaudio
+setuptools
+flask
