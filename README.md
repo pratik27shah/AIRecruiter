@@ -11,3 +11,5 @@ pip install -r requirements.txt
 
 
 python app.py 
+
+and on browser open the url localhost:5000
