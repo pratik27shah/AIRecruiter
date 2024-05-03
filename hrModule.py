@@ -7,7 +7,7 @@ import pyttsx3
 import speech_recognition as sr
 
 
-genai.configure(api_key="AIzaSyB4KCg8smLEXmKfrgdFwaA_G1gltCWyGVM")
+genai.configure(api_key="AIzaSyB4KCg8smLEXmKfrgdFwaA_G1gltCWy")
 
 
 model = genai.GenerativeModel('gemini-pro')
